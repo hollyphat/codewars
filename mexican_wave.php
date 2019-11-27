@@ -13,6 +13,8 @@ function wave($people){
 
     $words = str_split(strtolower("$people"));
     $words_array = strtolower("$people");
+    if($words_array == "")
+        return $output;
 
     for ($i = 0; $i < count($words); $i++){
         if($words[$i] == " ")
