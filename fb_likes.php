@@ -16,7 +16,7 @@ function likes( $names ) {
         $name_tag = "";
         for($k = 0; $k < count($names); $k++){
             if($k == count($names) - 1){
-                $name_tag .= $names[$k]. " ";
+                $name_tag .= $names[$k]. "";
             }else{
                 $name_tag .= $names[$k]." and ";
             }
