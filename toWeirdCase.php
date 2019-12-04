@@ -13,6 +13,7 @@
 function toWeirdCase($string) {
     // TODO
     $string = strtolower(trim($string));
+    $string_array = explode(" ", $string);
 
     $out = "";
     $t = 0;
