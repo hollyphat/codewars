@@ -9,19 +9,35 @@
 function likes( $names ) {
 
     // Your code here...
-    if(!is_array() || count($names) == 0)
+    if(!is_array($names) || count($names) == 0)
         return "No one likes this";
 
     if(count($names) < 4){
         $name_tag = "";
-        for($k =0; $k < count($names); $k++){
+        for($k = 0; $k < count($names); $k++){
             if($k == count($names) - 1){
                 $name_tag .= $names[$k]. " ";
             }else{
-                $name_tag .= $name_tag[$k]." and ";
+                $name_tag .= $names[$k]." and ";
             }
         }
-
         return "$name_tag like this";
+    }else{
+        $extra = count($names) - 2;
+        $name_tag = "";
+        for($k = 0; $k < 2; $k++){
+            if($k == 1){
+                $name_tag .= $names[$k]. "";
+            }else{
+                $name_tag .= $names[$k].", ";
+            }
+        }
+        return "$name_tag and $extra others like this";
     }
 }
+
+var_dump(likes(["Peter"]));
+
+var_dump(likes (["Jacob", "Alex"])); // must be "Jacob and Alex like this"
+var_dump(likes ( ["Max", "John", "Mark"])); // must be "Max, John and Mark like this"
+var_dump(likes ( ["Alex", "Jacob", "Mark", "Max"])); //
