@@ -32,13 +32,12 @@ function toWeirdCase($string) {
 
 //Tests
 
-/*
+
 var_dump(toWeirdCase("HeLlO WoRlD FoO BaR BaZ"));
 var_dump(toWeirdCase("WeLl I GuEsS YoU PaSsEd"));
 
 var_dump(toWeirdCase("Passed this one one foo one"));
 
 var_dump(toWeirdCase("so far so gOOD"));
-*/
 
 var_dump(toWeirdCase("HeLlO yOu tHiS FoO I PaSsEd wOrLd fOo"));
