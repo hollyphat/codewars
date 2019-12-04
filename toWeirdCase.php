@@ -16,18 +16,13 @@ function toWeirdCase($string) {
     $string_array = explode(" ", $string);
 
     $out = "";
-    $t = 0;
-    for($i = 0; $i < strlen($string); $i++){
-        $out .= $t %2 == 0 ? "".strtoupper($string[$i])."" : "".$string[$i];
-        if($string[$i] == " " && $t % 2 == 0){
-            $t = $i;
-        }else{
-            $t++;
+    foreach ($string_array as $value){
+        for($i = 0; $i < strlen($value); $i++){
+            $out .= $i %2 == 0 ? "".strtoupper($value[$i])."" : "".$value[$i];
         }
-
+        $out .= " ";
     }
-
-    return $out;
+    return trim($out);
 
 }
 
