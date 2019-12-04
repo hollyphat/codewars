@@ -16,7 +16,9 @@ function toWeirdCase($string) {
 
     $out = "";
     for($i = 0; $i < strlen($string); $i++){
-
+        $out .= $i %2 == 0 ? ucfirst($string[$i]): $string[$i];
     }
+
+    return $out;
 
 }
