@@ -13,15 +13,14 @@ function likes( $names ) {
         return "no one likes this";
 
     if(count($names) < 4){
-        $name_tag = "";
-        for($k = 0; $k < count($names); $k++){
-            if($k == count($names) - 1){
-                $name_tag .= $names[$k]. "";
-            }else{
-                $name_tag .= $names[$k]." and ";
-            }
+
+        if(count($names) == 2){
+            return "$names[0] and $names[1] like this";
+        }elseif (count($names) == 1){
+            return "$names[0] likes this";
+        }else{
+            return "$names[0], $names[1] and $names[2] like this";
         }
-        return "$name_tag like this";
     }else{
         $extra = count($names) - 2;
         $name_tag = "";
