@@ -15,8 +15,15 @@ function toWeirdCase($string) {
     $string = strtolower(trim($string));
 
     $out = "";
+    $t = 0;
     for($i = 0; $i < strlen($string); $i++){
-        $out .= $i %2 == 0 ? ucfirst($string[$i]): $string[$i];
+        $out .= $t %2 == 0 ? "".strtoupper($string[$i])."" : "".$string[$i];
+        if($string[$i] == " " && $t %2 == 0){
+            $t = $i;
+        }else{
+            $t++;
+        }
+
     }
 
     return $out;
@@ -25,5 +32,13 @@ function toWeirdCase($string) {
 
 //Tests
 
+/*
 var_dump(toWeirdCase("HeLlO WoRlD FoO BaR BaZ"));
 var_dump(toWeirdCase("WeLl I GuEsS YoU PaSsEd"));
+
+var_dump(toWeirdCase("Passed this one one foo one"));
+
+var_dump(toWeirdCase("so far so gOOD"));
+*/
+
+var_dump(toWeirdCase("HeLlO yOu tHiS FoO I PaSsEd wOrLd fOo"));
