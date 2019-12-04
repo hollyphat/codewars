@@ -10,7 +10,7 @@ function likes( $names ) {
 
     // Your code here...
     if(!is_array($names) || count($names) == 0)
-        return "No one likes this";
+        return "no one likes this";
 
     if(count($names) < 4){
         $name_tag = "";
