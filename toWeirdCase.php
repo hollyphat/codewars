@@ -22,3 +22,8 @@ function toWeirdCase($string) {
     return $out;
 
 }
+
+//Tests
+
+var_dump(toWeirdCase("HeLlO WoRlD FoO BaR BaZ"));
+var_dump(toWeirdCase("WeLl I GuEsS YoU PaSsEd"));
