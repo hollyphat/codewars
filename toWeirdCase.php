@@ -12,7 +12,11 @@
 
 function toWeirdCase($string) {
     // TODO
-    $string = trim($string);
+    $string = strtolower(trim($string));
 
+    $out = "";
+    for($i = 0; $i < strlen($string); $i++){
+
+    }
 
 }
